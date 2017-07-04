@@ -16,7 +16,7 @@ c.execute("""create table crimes (
         date datetime,
         category varchar(50),
         description varchar(1000),
-        updated_at timestamp)""")
+        updated_at datetime default CURRENT_TIMESTAMP)""")
 
 # c.execute("""create table hotels (
 #         hid int primary key not NULL ,
@@ -25,7 +25,7 @@ c.execute("""create table crimes (
 #         address text,
 #         rooms int,
 #         rate float)""")
-c.execute("Insert into crimes (description) values ('TEST Insert 1')")
+#c.execute("Insert into crimes (description) values ('TEST Insert 1')")
 # c.execute("""insert into towns values (1, "Melksham", "SN12")""")
 # c.execute("""insert into towns values (2, "Cambridge", "CB1")""")
 # c.execute("""insert into towns values (3, "Foxkilo", "CB22")""")
