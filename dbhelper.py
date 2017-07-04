@@ -38,6 +38,7 @@ class DBHelper:
             connection.close()
     
     def add_crime(self, category, date, latitude, longitude, description):
+        print(category,date, latitude,longitude,description)
         connection = self.connect()
         try:
             query = "INSERT INTO crimes (category, date, latitude,longitude, description) VALUES (?,?,?,?,?)"
